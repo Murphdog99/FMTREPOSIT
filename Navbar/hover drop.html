@@ -13,20 +13,17 @@
 }
 
 .dropdown {
-    position: relaive;
     display: inline-block;
     width: 100%;
 }
 
 .dropdown1 {
-    position: relativ;
     display: inline-block;
     width: 100%;
 }
 
 .dropdown-content {
     display: none;
-    position: absolue;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -36,7 +33,6 @@
 
 .dropdown-content1 {
     display: none;
-    position: absolut;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -46,14 +42,12 @@
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content1 a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
@@ -66,7 +60,7 @@
 
 .dropdown-content1 a:hover {background-color: #ddd;}
 
-.dropdown1:hover .dropdown-content1 {display: block;}
+
 
 .dropdown1:hover .dropbtn {background-color: #3e8e41;}
 
@@ -85,8 +79,8 @@
   <div class="dropdown-content">
 
     <div class="dropdown1">
-        <a href="#"><button class="dropbtn">Joint Operations</button></a>
-                                      <div class="dropdown-content1">
+        <button onclick='myFunction("a")' class="dropbtn">Joint Operations</button>
+                                      <div id="a" class="dropdown-content1">
                                         <a href="#">Link 1</a>
                                         <a href="#">Link 2</a>
                                         <a href="#">Link 3</a>
@@ -94,8 +88,8 @@
     </div>
 
     <div class="dropdown1">
-        <a href="#"><button class="dropbtn">Joint Operations</button></a>
-                                      <div class="dropdown-content1">
+        <button onclick='myFunction("b")' class="dropbtn">Recruitment</button>
+                                      <div id="b" class="dropdown-content1">
                                         <a href="#">Link 1</a>
                                         <a href="#">Link 2</a>
                                         <a href="#">Link 3</a>
@@ -103,17 +97,21 @@
     </div>
 
     <div class="dropdown1">
-        <a href="#"><button class="dropbtn">Joint Operations</button></a>
-                                      <div class="dropdown-content1">
+        <button onclick='myFunction("c")' class="dropbtn">Resources</button>
+                                      <div id="c" class="dropdown-content1">
                                         <a href="#">Link 1</a>
                                         <a href="#">Link 2</a>
                                         <a href="#">Link 3</a>
                                       </div>
     </div>
+
+    <a href="#"><button class="dropbtn">Forums</button></a>
+
   </div>
 </div>
 
 <script>
+////////////////* menu hover *////////////
 var acc = document.getElementsByClassName("dropbtn");
 var i;
 
@@ -127,6 +125,28 @@ for (i = 0; i < acc.length; i++) {
             panel.style.display = "block";
         }
     });
+}
+//////////////////////////////////////////////////
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(a) {
+    document.getElementById(a).classList.toggle("show");
+}
+
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 
