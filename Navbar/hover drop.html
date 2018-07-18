@@ -26,16 +26,16 @@
     display: none;
     background-color: rgb(74, 74, 74);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(74, 74, 74);
+    box-shadow: 0px 8px 16px 0px rgb(184, 184, 184);
     z-index: 1;
     width: 100%;
 }
 
 .dropdown-content1 {
     display: none;
-    background-color: rgb(74, 74, 74);
+    background-color: rgb(224, 224, 224);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(74, 74, 74);
+    box-shadow: 0px 8px 16px 0px rgb(199, 197, 197);
     z-index: 1;
     width: 100%;rgb(45, 45, 45)
 }
@@ -80,27 +80,26 @@
     <div class="dropdown1">
         <button onclick='myFunction("a")' class="dropbtn">Joint Operations</button>
                                       <div id="a" class="dropdown-content1">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                        <a href="#">Info</a>
+                                        <a href="#">Contact</a>
                                       </div>
     </div>
 
     <div class="dropdown1">
         <button onclick='myFunction("b")' class="dropbtn">Recruitment</button>
                                       <div id="b" class="dropdown-content1">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                        <a href="#">Info</a>
+                                        <a href="#">Apply</a>
                                       </div>
     </div>
 
     <div class="dropdown1">
         <button onclick='myFunction("c")' class="dropbtn">Resources</button>
                                       <div id="c" class="dropdown-content1">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                        <a href="#">Calendar</a>
+                                        <a href="#">Mods</a>
+                                        <a href="#">Teamspeak</a>
+                                        <a href="#">Server Info</a>
                                       </div>
     </div>
 
@@ -135,9 +134,9 @@ function myFunction(a) {
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn1')) {
+  if (!event.target.matches('.dropbtn')) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var dropdowns = document.getElementsByClassName("dropdown-content1");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
