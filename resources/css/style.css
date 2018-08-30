@@ -155,7 +155,7 @@ h3 {
     top: 92%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-60%);
   }
 
   .icon-bar a {
